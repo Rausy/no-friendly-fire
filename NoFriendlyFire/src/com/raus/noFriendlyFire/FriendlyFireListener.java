@@ -1,7 +1,7 @@
 package com.raus.noFriendlyFire;
 
 import org.bukkit.entity.AnimalTamer;
-import org.bukkit.entity.Arrow;
+import org.bukkit.entity.Projectile;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Tameable;
 import org.bukkit.event.EventHandler;
@@ -18,10 +18,10 @@ public class FriendlyFireListener implements Listener
 		Entity ent = event.getEntity();
 		Entity dmg = event.getDamager();
 		
-		// We want the shooter not an arrow
-		if (dmg instanceof Arrow)
+		// We want the shooter not a projectile
+		if (dmg instanceof Projectile)
 		{
-			dmg = (Entity) ((Arrow) dmg).getShooter();
+			dmg = (Entity) ((Projectile) dmg).getShooter();
 		}
 		
 		if (ent instanceof Tameable && dmg instanceof AnimalTamer)
