@@ -1,0 +1,17 @@
+name: NoFriendlyFire
+description: No more accidentally hitting your pets!
+author: Raus
+main: com.raus.noFriendlyFire.Main
+version: 1.0
+api-version: 1.15
+
+commands:
+  noff:
+    description: No Friendly Fire
+    default: true
+    usage: "Usage: /noff [info|toggle]"
+
+permissions:
+  nofriendlyfire.toggle:
+    default: true
+    description: Allows you to reload the config
