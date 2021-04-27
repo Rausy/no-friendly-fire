@@ -12,7 +12,7 @@ Do you ever accidentally hit, slash, or shoot your companion dog while fighting 
 It will automatically protect your tamed pets from friendly fire, but you can also toggle it off.
 
 ## Commands
-**/noff info** - plugin info
+**/noff info** - Plugin info
 
 **/noff toggle** - Toggle friendly fire
 
