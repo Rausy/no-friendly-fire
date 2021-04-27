@@ -61,11 +61,11 @@ public class noFriendlyFire extends JavaPlugin {
         this.messages = new String[Messages.values().length];
 
         HashMap<String, CustomizableMessage> defaults = new HashMap<>();
-        this.addDefault(defaults, Messages.PROTECTION_DISABLED, "$7 You have $a$nenabled$7 FriendlyFire.", null);
-        this.addDefault(defaults, Messages.PROTECTION_ENABLED, "$7 You have $c$ndisabled$7 FriendlyFire.", null);
-        this.addDefault(defaults, Messages.PLAYER_ONLY_COMMAND, "[NoFF] This command cannot be run from the console.", null);
-        this.addDefault(defaults, Messages.NO_PERMS,  "[NoFF] You do not have permission to run this command.", null);
-        this.addDefault(defaults, Messages.VERSION_INFO,  "[NoFF] Version: {0}", "Args: 0-version");
+        this.addDefault(defaults, Messages.PROTECTION_DISABLED, "[NoFF] &7 You turned on friendly fire.", null);
+        this.addDefault(defaults, Messages.PROTECTION_ENABLED, "[NoFF] &7 You turned of friendly fire.", null);
+        this.addDefault(defaults, Messages.PLAYER_ONLY_COMMAND, "[NoFF] &4This command cannot be run from the console.", null);
+        this.addDefault(defaults, Messages.NO_PERMS,  "[NoFF] &4You do not have permission to run this command.", null);
+        this.addDefault(defaults, Messages.VERSION_INFO,  "[NoFF] &7Version: {0}", "Args: 0-version");
 
 
         //load the config file
@@ -89,7 +89,7 @@ public class noFriendlyFire extends JavaPlugin {
             msg_config.set("Messages." + messageID.name() + ".Text", this.messages[messageID.ordinal()]);
 
             //support color codes
-            this.messages[messageID.ordinal()] = this.messages[messageID.ordinal()].replace('$', (char) 0x00A7);
+            this.messages[messageID.ordinal()] = this.messages[messageID.ordinal()].replace('&', (char) 0x00A7);
 
 
             if (messageData.notes != null)
