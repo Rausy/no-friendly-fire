@@ -4,6 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TabHelper implements TabCompleter {
@@ -13,7 +14,13 @@ public class TabHelper implements TabCompleter {
     }
 
     @Override
-    public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
-        return null;
+    public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] args) {
+        ArrayList<String> fill = new ArrayList<>();
+        if (command.getName().equalsIgnoreCase("noff"))
+            if (args.length == 1){
+                fill.add("info");
+                fill.add("toggle");
+            }
+        return fill;
     }
 }

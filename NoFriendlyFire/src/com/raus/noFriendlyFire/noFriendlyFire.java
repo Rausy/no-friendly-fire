@@ -1,7 +1,4 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
+
 
 package com.raus.noFriendlyFire;
 
@@ -22,7 +19,7 @@ public class noFriendlyFire extends JavaPlugin {
 
 
     //TODO: HashSet
-    static HashMap<UUID, Boolean> friendlyFire = new HashMap();
+    static HashMap<UUID, Boolean> friendlyFire = new HashMap<>();
     static Logger log;
     private  String[] messages;
 

@@ -1,7 +1,4 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
+
 
 package com.raus.noFriendlyFire;
 
@@ -33,9 +30,9 @@ public class ToggleCommand implements CommandExecutor {
             }
 
             Player ply = (Player)sender;
-            boolean state = noFriendlyFire.isNoFF(ply.getUniqueId());
-            noFriendlyFire.setNoFF(ply.getUniqueId(), !state);
-            if (!state) {
+            boolean new_state = !noFriendlyFire.isNoFF(ply.getUniqueId());
+            noFriendlyFire.setNoFF(ply.getUniqueId(), new_state);
+            if (new_state) {
                 sender.sendMessage(plugin.getMessage(Messages.PROTECTION_ENABLED));
             } else {
                 sender.sendMessage(plugin.getMessage(Messages.PROTECTION_DISABLED));
